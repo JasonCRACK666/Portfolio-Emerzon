@@ -1,0 +1,15 @@
+---
+interface LinkProps {
+  path: string
+  name: string
+}
+
+const { path, name } = Astro.props as LinkProps
+---
+
+<a
+  href={path}
+  class={`py-2 px-3 text-xl undeline underline-offset-1 text-white hover:bg-green-500`}
+>
+  {name}
+</a>
