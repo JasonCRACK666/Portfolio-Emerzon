@@ -5,11 +5,15 @@ interface LinkProps {
 }
 
 const { path, name } = Astro.props as LinkProps
+
+const isActive = path === Astro.url.pathname
 ---
 
 <a
   href={path}
-  class={`py-2 px-3 text-xl undeline underline-offset-1 text-white hover:bg-green-500`}
+  class={`py-2 px-3 text-xl hover:underline hover:underline-offset-4 text-white ${
+    isActive && 'bg-green-500'
+  }`}
 >
   {name}
 </a>

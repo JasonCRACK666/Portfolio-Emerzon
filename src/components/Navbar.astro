@@ -4,13 +4,15 @@ import Link from './Link.astro'
 import { MdComputer } from 'react-icons/md'
 ---
 
-<nav class='flex justify-between h-16 items-center w-full'>
+<nav
+  class='flex justify-between h-16 items-center w-full py-2 px-6 bg-gray-900/20 backdrop-blur-md'
+>
   <a href='/' class='flex items-center gap-2'>
     <MdComputer className='text-2xl' />
     <span class='text-xl font-bold'>EmerzonKolki</span>
   </a>
-  <div class='flex items-center'>
+  <div class='flex items-center gap-2'>
     <Link path='/' name='Home' />
-    <Link path='/' name='Projects' />
+    <Link path='/works' name='Works' />
   </div>
 </nav>
