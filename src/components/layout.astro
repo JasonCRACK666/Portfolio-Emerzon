@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 import Navbar from './Navbar.astro'
 ---
 
@@ -11,12 +13,14 @@ import Navbar from './Navbar.astro'
     <title>Emerzon Kolki - JasonCrk</title>
   </head>
   <body>
-    <div class='bg-gray-900 text-white'>
+    <div class='bg-gray-900 text-white font-mplug'>
       <div
-        class="container mx-auto md:px-20 lg:px-32 xl:px-40 2xl:px-52 flex flex-col items-center gap-2"
+        class="container mx-auto md:px-layoutmd lg:px-layoutlg xl:px-layoutxl 2xl:px-layout2xl flex flex-col items-center gap-2"
       >
         <Navbar />
-        <slot />
+        <main class="w-full max-sm:px-6 sm:w-10/12 md:w-3/4 lg:w-3/4 xl:w-2/3 2xl:w-3/4">
+          <slot />
+        </main>
       </div>
     </div>
   </body>
