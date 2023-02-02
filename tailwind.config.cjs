@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       padding: {
-        layout2xl: "24rem",
+        layout2xl: "20rem",
         layoutxl: "16rem",
         layoutlg: "4rem",
         layoutmd: "0rem",
