@@ -1,15 +1,19 @@
 ---
 import { Image } from '@astrojs/image/components'
 
-import avatarImg from '../assets/Jason.png'
+import { MdSimCardDownload } from 'react-icons/md/index.js'
+
 import Layout from '../components/layout.astro'
+
+import avatarImg from '../assets/Jason.png'
+import myCV from '../assets/docs/Clean.Code.A.Handbook.of.Agile.Software.Craftsmanship.pdf'
 ---
 
 <Layout>
   <div class='text-center text-lg py-3 rounded-md bg-primary/30 mb-4'>
     Hello, I'm a full-stack developer based in Peru!
   </div>
-  <div class='flex flex-row items-center justify-between mb-4'>
+  <section class='flex flex-row items-center justify-between mb-4'>
     <div>
       <h1 class='font-bold text-5xl'>Emerzon Javier <br /> Kolki Martinez</h1>
       <p class='text-primary text-xl'>JasonCrk ( Developer )</p>
@@ -19,9 +23,9 @@ import Layout from '../components/layout.astro'
       alt='avatar'
       class='rounded-full w-36 h-36 object-cover border-2 border-white'
     />
-  </div>
-  <div class='mb-4'>
-    <h2 class='border-b-2 border-primary text-2xl font-bold inline-block mb-2'>
+  </section>
+  <section class='mb-4 flex flex-col gap-2 items-start'>
+    <h2 class='border-b-2 border-primary text-2xl font-bold inline-block'>
       About Me
     </h2>
     <p class='indent-8 text-xl'>
@@ -31,5 +35,14 @@ import Layout from '../components/layout.astro'
       order to continue growing professionally, all with the aim of solving real
       life problems with the code.
     </p>
-  </div>
+    <form class='self-center' method='get' action={myCV}>
+      <button
+        class='flex items-center text-xl gap-1 px-3 py-2 rounded-md bg-secondary hover:bg-blue-700 transition-colors'
+        type='submit'
+      >
+        <span>Download CV</span>
+        <MdSimCardDownload />
+      </button>
+    </form>
+  </section>
 </Layout>
