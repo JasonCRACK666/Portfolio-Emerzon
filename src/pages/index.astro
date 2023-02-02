@@ -6,18 +6,30 @@ import Layout from '../components/layout.astro'
 ---
 
 <Layout>
-  <div class='text-center py-3 rounded-md bg-primary/30 mb-4'>
+  <div class='text-center text-lg py-3 rounded-md bg-primary/30 mb-4'>
     Hello, I'm a full-stack developer based in Peru!
   </div>
   <div class='flex flex-row items-center justify-between mb-4'>
     <div>
       <h1 class='font-bold text-5xl'>Emerzon Javier <br /> Kolki Martinez</h1>
-      <p class='text-primary text-lg'>JasonCrk ( Developer )</p>
+      <p class='text-primary text-xl'>JasonCrk ( Developer )</p>
     </div>
     <Image
       src={avatarImg}
       alt='avatar'
       class='rounded-full w-36 h-36 object-cover border-2 border-white'
     />
+  </div>
+  <div class='mb-4'>
+    <h2 class='border-b-2 border-primary text-2xl font-bold inline-block mb-2'>
+      About Me
+    </h2>
+    <p class='indent-8 text-xl'>
+      Emerzon Javier Kolki Martinez is a full-stack developer based in Peru with
+      a great passion for creating digital services/things that are of interest
+      to him, he also has a taste for learning and continuous improvement in
+      order to continue growing professionally, all with the aim of solving real
+      life problems with the code.
+    </p>
   </div>
 </Layout>
